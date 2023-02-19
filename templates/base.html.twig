@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Les ateliers</title>
+        
+        
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"  defer>		
+		
+		{% block stylesheets %}
+
+
+        {% endblock %}
+		
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"  defer ></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"  defer ></script>
+
+        
+		{% block javascripts %}
+            
+			
+        {% endblock %}
+    </head>
+    <body>
+	
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">CRUD Ateliers</a>
+    </div>
+    <ul class="nav navbar-nav">
+	  <li><a href="{{path('app_first')}}" > List/ Update/Delete </a>
+
+      <li><a href="{{path('add_atelier')}}" > Add </a>
+
+	      </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>ATELIERS</h3>
+</div>
+
+	
+	
+	
+	
+        {% block body %}{% endblock %}
+    </body>
+</html>

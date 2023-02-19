@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Atelier Projet {% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+
+{% for atelier in ateliers %}
+
+    <b>Id Atelier : </b> {{ atelier.id}} <br/>
+	<b>Nom Atelier:</b> {{ atelier.Nom }} <br/>
+	
+	<b> Description Atelier : </b> {{ atelier.Description }}
+	
+	<br/>
+	
+	<a href="{{path('update_atelier', {atelier_id: atelier.id})}}" > update </a>
+	
+	<a href="{{path('delete_atelier', {id_delete: atelier.id})}}" > delete </a>
+
+	<hr/>
+{% endfor %}
+
+
+{% for message in app.flashes('success') %}
+
+  <p>{{ message }}</p>
+  
+{% endfor %}
+
+
+{% endblock %}
